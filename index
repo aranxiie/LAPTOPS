@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Acer Aspire Lite 14 vs Acer Swift Go 14 – Comparison</title>
+  <style>
+    :root {
+      --bg: #0b0b0c;
+      --panel: #111114;
+      --panel-2: #17171b;
+      --text: #f5f5f7;
+      --muted: #c5c5cb;
+      --red: #e11d2e; /* accent */
+      --red-700: #b3121f;
+      --green: #22c55e;
+      --shadow: 0 10px 30px rgba(0,0,0,.4);
+      --radius: 20px;
+    }
+
+    * { box-sizing: border-box; }
+    html, body { height: 100%; }
+
+    body {
+      margin: 0;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+      background: radial-gradient(1200px 800px at 75% -10%, rgba(225, 29, 46, .12), transparent), var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    .wrap {
+      max-width: 1100px;
+      margin: 24px auto 96px;
+      padding: 0 16px;
+    }
+
+    header.hero {
+      display: grid;
+      gap: 8px;
+      margin-bottom: 18px;
+    }
+
+    .kicker { color: var(--red); letter-spacing: .12em; text-transform: uppercase; font-weight: 700; font-size: 12px; }
+    h1 { margin: 0; font-size: clamp(28px, 4vw, 40px); line-height: 1.15; }
+    .sub { color: var(--muted); max-width: 70ch; }
+
+    .cards {
+      margin: 22px 0 28px;
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 16px;
+    }
+
+    .card {
+      background: linear-gradient(180deg, var(--panel), var(--panel-2));
+      border: 1px solid #232329;
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      overflow: hidden;
+    }
+
+    .card .top {
+      display: grid;
+      grid-template-columns: 120px 1fr;
+      gap: 16px;
+      align-items: center;
+      padding: 16px;
+      border-bottom: 1px solid #232329;
+      background: linear-gradient(180deg, rgba(225,29,46,.08), transparent);
+    }
+
+    .thumb {
+      width: 100%;
+      aspect-ratio: 4 / 3;
+      object-fit: cover;
+      background: #09090b;
+      border-radius: 12px;
+      border: 1px solid #232329;
+    }
+
+    .badge { display: inline-flex; gap: 8px; align-items: center; padding: 6px 10px; border-radius: 999px; background: #1a1a1f; border: 1px solid #2a2a32; font-size: 12px; color: var(--muted); }
+    .badge .dot { width: 8px; height: 8px; border-radius: 999px; background: var(--red); box-shadow: 0 0 0 2px rgba(225,29,46,.25); }
+
+    .model { font-size: 18px; font-weight: 700; margin: 4px 0 2px; }
+    .series { color: var(--muted); font-size: 14px; }
+
+    .table-wrap {
+      overflow: auto;
+      border-radius: var(--radius);
+      border: 1px solid #232329;
+      box-shadow: var(--shadow);
+    }
+
+    table.compare {
+      width: 100%;
+      border-collapse: separate;
+      border-spacing: 0;
+      background: linear-gradient(180deg, var(--panel), var(--panel-2));
+    }
+
+    .compare thead th {
+      position: sticky;
+      top: 0;
+      backdrop-filter: blur(6px);
+      background: linear-gradient(180deg, rgba(11,11,12,.9), rgba(23,23,27,.9));
+      z-index: 2;
+    }
+
+    .compare th, .compare td {
+      padding: 14px 16px;
+      border-bottom: 1px solid #232329;
+      vertical-align: top;
+    }
+
+    .compare th.spec {
+      width: 22%;
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: .08em;
+      font-size: 12px;
+      background: #121216;
+      position: sticky; left: 0; z-index: 3;
+      border-right: 1px solid #232329;
+    }
+
+    .compare thead th.spec { background: linear-gradient(180deg, rgba(18,18,22,.9), rgba(18,18,22,.9)); }
+
+    .compare thead th { font-size: 14px; text-align: left; color: var(--text); }
+
+    .compare tbody tr:hover td { background: rgba(225,29,46,.06); }
+
+    .h { color: var(--text); font-weight: 700; }
+    .muted { color: var(--muted); }
+    .accent { color: var(--red); font-weight: 700; }
+
+    ul.proscons { margin: 8px 0 0 18px; padding: 0; }
+    ul.proscons li { margin: 6px 0; }
+    .pill { padding: 2px 8px; border-radius: 999px; font-size: 11px; font-weight: 700; background: #1f1f25; color: var(--muted); border: 1px solid #2a2a32; }
+    .pill.ok { background: rgba(34,197,94,.12); color: #9befb7; border-color: rgba(34,197,94,.25); }
+    .pill.warn { background: rgba(225,29,46,.12); color: #ffc0c7; border-color: rgba(225,29,46,.25); }
+
+    footer.note {
+      margin-top: 22px;
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    /* Mobile stacking for readability */
+    @media (max-width: 760px) {
+      .cards { grid-template-columns: 1fr; }
+      .card .top { grid-template-columns: 1fr; }
+      .compare th.spec { position: static; width: auto; }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header class="hero">
+      <span class="kicker">Red × Black • Side‑by‑side</span>
+      <h1>Acer Aspire Lite 14 vs Acer Swift Go 14</h1>
+      <p class="sub">Clean, print‑friendly comparison of two Acer 14‑inch models with specs and pros/cons. Theme uses dark background with red highlights.</p>
+    </header>
+
+    <section class="cards" aria-label="Model overview cards">
+      <article class="card" aria-labelledby="aspire-title">
+        <div class="top">
+          <img class="thumb" alt="Acer Aspire Lite 14 AL14-31P-36BE product photo" src="https://static-ecapac.acer.com/media/catalog/product/a/c/acer_ecommproducts_al14-31p-36be-3_nx.ks9sp.003.jpg?optimize=high&bg-color=255,255,255&fit=bounds&height=&width=&canvas=" />
+          <div>
+            <span class="badge"><span class="dot"></span> Aspire Series</span>
+            <h2 id="aspire-title" class="model">Acer Aspire Lite 14 AL14‑31P‑36BE</h2>
+            <div class="series muted">Intel Core i3‑N300 • 8GB • 512GB SSD • 14″ WUXGA</div>
+          </div>
+        </div>
+      </article>
+
+      <article class="card" aria-labelledby="swift-title">
+        <div class="top">
+          <img class="thumb" alt="Acer Swift Go 14 SFG14-72-594D product photo" src="https://www.gigahertz.com.ph/cdn/shop/files/acer-swift-go-14-sfg14-72-594d-14-lcd-ultra-5-arc-graphics-16gb-ram-512gb-ssd-win-11-acer-gigahertz-699845.jpg?v=1729560271&width=1000" />
+          <div>
+            <span class="badge"><span class="dot"></span> Swift Series</span>
+            <h2 id="swift-title" class="model">Acer Swift Go 14 SFG14‑72‑594D</h2>
+            <div class="series muted">Core Ultra 5 125H • 16GB • 512GB Gen4 • 14″ 100% sRGB</div>
+          </div>
+        </div>
+      </article>
+    </section>
+
+    <div class="table-wrap" role="region" aria-label="Specification comparison table" tabindex="0">
+      <table class="compare">
+        <thead>
+          <tr>
+            <th class="spec">Specification</th>
+            <th class="h">Acer Aspire Lite 14 AL14‑31P‑36BE</th>
+            <th class="h">Acer Swift Go 14 SFG14‑72‑594D</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row" class="spec">Processor</th>
+            <td>Intel Core i3‑N300 (8 cores, 1.8&nbsp;GHz base, up to 3.8&nbsp;GHz turbo)</td>
+            <td>Intel Core Ultra 5 125H (14‑core hybrid architecture with on‑chip NPU/AI)</td>
+          </tr>
+          <tr>
+            <th scope="row" class="spec">Memory</th>
+            <td>8&nbsp;GB DDR5</td>
+            <td>16&nbsp;GB LPDDR5X</td>
+          </tr>
+          <tr>
+            <th scope="row" class="spec">Storage</th>
+            <td>512&nbsp;GB NVMe SSD</td>
+            <td>512&nbsp;GB PCIe Gen&nbsp;4 SSD (up to ~7&nbsp;GB/s)</td>
+          </tr>
+          <tr>
+            <th scope="row" class="spec">Display</th>
+            <td>14″ 1920×1200 (WUXGA) IPS, matte ComfyView</td>
+            <td>14″ 1920×1200 (WUXGA) IPS, matte ComfyView, 100% sRGB</td>
+          </tr>
+          <tr>
+            <th scope="row" class="spec">Graphics</th>
+            <td>Intel UHD Graphics (integrated)</td>
+            <td>Intel Arc integrated GPU</td>
+          </tr>
+          <tr>
+            <th scope="row" class="spec">Battery &amp; Runtime</th>
+            <td>45.6&nbsp;Wh battery; up to ~10.5&nbsp;hours (max)</td>
+            <td>65&nbsp;Wh battery; up to ~13&nbsp;hours</td>
+          </tr>
+          <tr>
+            <th scope="row" class="spec">Ports &amp; Connectivity</th>
+            <td>HDMI, 3× USB‑A 3.2 Gen&nbsp;1, 1× USB‑C 3.2 Gen&nbsp;1, Wi‑Fi ac, BT&nbsp;5.0</td>
+            <td>HDMI, 2× USB‑A 3.2 Gen&nbsp;1, 2× USB4/Thunderbolt&nbsp;4, USB‑C docking, microSD, Wi‑Fi&nbsp;6, Bluetooth</td>
+          </tr>
+          <tr>
+            <th scope="row" class="spec">Weight &amp; Dimensions</th>
+            <td>≈1.35&nbsp;kg; 18.95&nbsp;mm thick</td>
+            <td>≈1.32&nbsp;kg; 14.9&nbsp;mm thick</td>
+          </tr>
+          <tr>
+            <th scope="row" class="spec">Other Features</th>
+            <td>Basic webcam; no fingerprint reader; standard speakers; no backlit keyboard</td>
+            <td>Fingerprint reader; backlit keyboard; OceanGlass touchpad; AI noise‑reduction mics</td>
+          </tr>
+          <tr>
+            <th scope="row" class="spec">Pros</th>
+            <td>
+              <span class="pill ok">Budget‑friendly</span>
+              <ul class="proscons">
+                <li>More affordable entry‑level configuration (often around ₱25,999)</li>
+                <li>Lightweight and slim — good portability</li>
+                <li>Decent 14″ IPS WUXGA display</li>
+              </ul>
+            </td>
+            <td>
+              <span class="pill ok">Performance</span>
+              <ul class="proscons">
+                <li>Core Ultra 5 125H with AI features improves multitasking</li>
+                <li>16&nbsp;GB LPDDR5X RAM and fast PCIe Gen4 SSD</li>
+                <li>100% sRGB display; premium build that’s slim and light</li>
+                <li>Longer battery (65&nbsp;Wh) and richer port selection incl. TB4, microSD</li>
+                <li>Extras: fingerprint reader, backlit keyboard, OceanGlass touchpad</li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row" class="spec">Cons</th>
+            <td>
+              <span class="pill warn">Entry‑level limits</span>
+              <ul class="proscons">
+                <li>Lower‑end i3‑N300 limits heavy workloads</li>
+                <li>Only 8&nbsp;GB RAM; less future‑proof</li>
+                <li>Smaller 45.6&nbsp;Wh battery and shorter runtime</li>
+                <li>Lacks Thunderbolt, backlit keyboard, fingerprint reader</li>
+              </ul>
+            </td>
+            <td>
+              <span class="pill warn">Higher cost</span>
+              <ul class="proscons">
+                <li>Pricier than Aspire Lite</li>
+                <li>Integrated Arc GPU still limited for demanding gaming/editing</li>
+                <li>Battery life solid but not class‑leading in some workflows</li>
+              </ul>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <footer class="note">
+      Images: Acer &amp; Gigahertz product listings. This is a static comparison page with a red/black theme. Use <kbd>Ctrl/Cmd + P</kbd> to print.
+    </footer>
+  </div>
+
+  <script>
+    // Tiny enhancement: allow quick copy of a cell's text on double-click
+    document.addEventListener('dblclick', (e) => {
+      const cell = e.target.closest('td');
+      if (!cell) return;
+      const text = cell.innerText.trim();
+      navigator.clipboard?.writeText(text).then(() => {
+        const old = cell.style.boxShadow;
+        cell.style.boxShadow = 'inset 0 0 0 2px var(--red)';
+        setTimeout(() => (cell.style.boxShadow = old), 350);
+      }).catch(() => {});
+    });
+  </script>
+</body>
+</html>
